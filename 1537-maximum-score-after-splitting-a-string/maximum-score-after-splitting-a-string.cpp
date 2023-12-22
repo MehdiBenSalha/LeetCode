@@ -1,6 +1,9 @@
 class Solution {
 public:
  int maxScore(string s) {
+     if(s=="11" || s=="00") return 1;
+        if(s=="01") return 2;
+        if(s=="10") return 0;
         int o=0,z=0;
         for(auto x:s){
             if(x=='0') z++;
@@ -16,9 +19,7 @@ public:
             else oo++;
             ans=max(ans,zz+o-oo);
         }
-        if(s=="11" || s=="00") return 1;
-        if(s=="01") return 2;
-        if(s=="10") return 0;
+        
         return ans;
 
     }
