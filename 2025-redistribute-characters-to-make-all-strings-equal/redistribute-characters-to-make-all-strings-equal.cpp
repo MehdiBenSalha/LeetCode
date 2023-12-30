@@ -9,8 +9,8 @@ mp[y]++;
 }
 bool f= true;
 for(auto x:mp){
-    if(x.second%words.size()!=0) f=false;
-    if(!f) return f;
+    if(x.second%words.size()!=0){ f=false; break;}
+    
 }
 return f;
 }
